@@ -144,6 +144,15 @@ For production:
 
 ---
 
+## Install on Ubuntu 16.04 LTS
+```
+# apt update
+# apt install python-pip mariadb-server redis-server wkhtmltopdf
+# curl -sL https://deb.nodesource.com/setup_8.x | sudo -E bash -
+# apt-get install -y nodejs
+
+```
+
 ## Bench Manger (GUI for Bench)
 
 Bench Manager is a graphical user interface to emulate the functionalities of Frappé Bench. Like the command line utility it helps you install apps, manage multiple sites, update apps and much more.
