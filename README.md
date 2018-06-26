@@ -150,9 +150,32 @@ For production:
 # apt install python-pip mariadb-server redis-server wkhtmltopdf
 # curl -sL https://deb.nodesource.com/setup_8.x | sudo -E bash -
 # apt-get install -y nodejs
-
+# 
 ```
 
+Create file `/etc/mysql/mariadb.cnf.d/erpnext.cnf`
+
+```
+[mysqld]
+innodb-file-format=barracuda
+innodb-file-per-table=1
+innodb-large-prefix=1
+character-set-client-handshake = FALSE
+character-set-server = utf8mb4
+collation-server = utf8mb4_unicode_ci
+
+[mysql]
+default-character-set = utf8mb4
+```
+
+```
+# systemctl restart mysql
+# mysql
+> SET PASSWORD FOR 'root'@'localhost' = PASSWORD('newpass');
+> USE mysql
+> update user set plugin='' where User='root';
+> flush privileges
+```
 ## Bench Manger (GUI for Bench)
 
 Bench Manager is a graphical user interface to emulate the functionalities of Frappé Bench. Like the command line utility it helps you install apps, manage multiple sites, update apps and much more.
