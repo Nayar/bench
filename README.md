@@ -153,7 +153,7 @@ For production:
 # 
 ```
 
-Create file `/etc/mysql/mariadb.cnf.d/erpnext.cnf`
+Create file `/etc/mysql/mariadb.conf.d/erpnext.cnf`
 
 ```
 [mysqld]
