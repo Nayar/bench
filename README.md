@@ -148,10 +148,11 @@ For production:
 ```
 # apt update
 # apt install python-pip mariadb-server redis-server wkhtmltopdf
-# pip install virtualenv
+# pip install virtualenv honcho
 # curl -sL https://deb.nodesource.com/setup_8.x | sudo -E bash -
 # apt-get install -y nodejs
-# 
+# npm install -g yarn
+# adduser frappe
 ```
 
 Create file `/etc/mysql/mariadb.conf.d/erpnext.cnf`
@@ -179,7 +180,7 @@ default-character-set = utf8mb4
 ```
 
 ```
-export PATH="~/.local/bin:$PATH"
+export PATH="/home/frappe/.local/bin:$PATH"
 ```
 ## Bench Manger (GUI for Bench)
 
