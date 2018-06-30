@@ -148,6 +148,7 @@ For production:
 ```
 # apt update
 # apt install python-pip mariadb-server redis-server wkhtmltopdf
+# pip install virtualenv
 # curl -sL https://deb.nodesource.com/setup_8.x | sudo -E bash -
 # apt-get install -y nodejs
 # 
